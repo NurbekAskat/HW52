@@ -8,6 +8,6 @@ function App() {
               <Card rank={'a'} suit={'diams'}/>
         </div>
     );
-};
+}
 
 export default App;

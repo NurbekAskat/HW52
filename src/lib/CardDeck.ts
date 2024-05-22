@@ -21,8 +21,7 @@ class CardDeck {
     }
 
     getCard(): Card {
-        const oneCard = this.cards.splice(getRandomId(0, this.cards.length));
-        console.log(oneCard);
+        const oneCard = this.cards.splice(getRandomId(0, this.cards.length), 1);
         return oneCard[0];
     }
 

@@ -1,46 +1,30 @@
 import React from 'react';
 
 interface Props {
-    rank: keyof RankInter;
-    suit: keyof SuitInter;
+    rank: string;
+    suit: string;
 }
 
-interface SuitInter {
-    diams: string;
-    hearts: string;
-    clubs: string;
-    spades: string;
-}
-
-interface RankInter {
-    j: string;
-    q: string;
-    k: string;
-    a: string;
-}
-
-const suits: SuitInter = {
+const suitSymbols: { [key: string]: string }  = {
     diams: '♦',
     hearts: '♥',
     clubs: '♣',
     spades: '♠',
 };
 
-const ranks: RankInter = {
-    j: 'J',
-    q: 'Q',
-    k: 'K',
-    a: 'A',
+const ranks: { [key: string]: string }  = {
+    J: 'j',
+    Q: 'q',
+    K: 'k',
+    A: 'a',
 };
 
 const Card: React.FC<Props> = ({rank, suit}) => {
-    const cardSuit = suits[suit];
-    const cardRank = ranks[rank]
 
     return (
-        <span className={`card rank-${rank} ${suit}`}>
-            <span className="rank">{cardRank}</span>
-            <span className="suit">{cardSuit}</span>
+        <span className={`card rank-${ranks.rank} ${suit}`}>
+            <span className="rank">{rank}</span>
+            <span className="suit">{suitSymbols[suit]}</span>
         </span>
     );
 };

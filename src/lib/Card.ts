@@ -1,13 +1,11 @@
 class Card {
-    rank: string;
-    suit: string;
-    id: number;
+  rank: string;
+  suit: string;
 
-    constructor(rank: string, suit: string, id: number) {
-        this.rank = rank;
-        this.suit = suit;
-        this.id = id;
-    }
+  constructor(rank: string, suit: string) {
+    this.rank = rank;
+    this.suit = suit;
+  }
 }
 
 export default Card;
